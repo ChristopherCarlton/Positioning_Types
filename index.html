@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Positioned Layout</title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      /* Task 1
+         Make the Help Button 
+         only show up in the bottom right corner 
+         of the screen.
+      */
+
+      .help {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+      }
+
+      /* Task 2
+         Make the save button appear in 
+         bottom right hand corner of each pin,
+         on top of the image.
+      */
+
+      .save {
+        position: relative;
+        bottom: 0;
+        /* right: 0; */
+        left: 150px;
+        z-index: 1;
+      }
+
+      /* Task 3
+         Make the section headings stay 
+         at the top of the screen while on
+         that section.
+      */
+      .title {
+        position: sticky;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- I've omitted alts for this demonstration -->
+    <button class="help">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+        />
+      </svg>
+      <span class="visually-hidden">Help</span>
+    </button>
+
+    <section>
+      <header class="title">
+        <h1>Food Pins</h1>
+      </header>
+      <article class="pin">
+        <img
+          class="img"
+          src="https://images.food52.com/4l6yAZZ6XqUPoSG7T0imUqi7UMw=/500x500/ad1685c8-4098-48f8-af93-86164abedfff--2021-0708_serax_ottolenghi-collab-dinnerware_crispy-panko-chicken_1x1_mj-kroeger.jpg"
+        />
+        <button class="save">Save</button>
+      </article>
+      <article class="pin">
+        <img
+          class="img"
+          src="https://cdn.vox-cdn.com/thumbor/zYdhaDkn1NB54JQylnW7PhFU7sY=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21868751/ottolenghi_flavour_miso_butter_onions_25cd381d_bfb8_4a25_8fd7_8e7837765c8f_s840x0_q80_noupscale.jpg"
+        />
+        <button class="save">Save</button>
+      </article>
+    </section>
+    <section>
+      <header class="title">
+        <h1>Travel Pins</h1>
+      </header>
+      <article class="pin">
+        <img
+          class="img"
+          src="https://www.josephfiler.com/images/xl/California-Yosemite-Half-Dome-Sunset-108.jpg"
+        />
+        <button class="save">Save</button>
+      </article>
+      <article class="pin">
+        <img
+          class="img"
+          src="https://www.tripsavvy.com/thmb/gk7NEmDJuF1Uwg_9BFbCNu5gsms=/2624x3936/filters:fill(auto,1)/TAM_3402-08aeec8bf338425791ce0825cb205e9a.jpg"
+        />
+        <button class="save">Save</button>
+      </article>
+      <article class="pin">
+        <img
+          class="img"
+          src="https://media.cntraveler.com/photos/5bce196031019f0885f7cbc9/4:5/w_2132,h_2665,c_limit/Machu-Picchu_GettyImages-109401484.jpg"
+        />
+        <button class="save">Save</button>
+      </article>
+      <article class="pin">
+        <img
+          class="img"
+          src="https://images.squarespace-cdn.com/content/v1/5a4c3e9edc2b4ad1d30462e3/1578500706428-3B81EQAX0BEN0GV2U7A0/54924101_s.jpg"
+        />
+        <button class="save">Save</button>
+      </article>
+    </section>
+  </body>
+</html>
